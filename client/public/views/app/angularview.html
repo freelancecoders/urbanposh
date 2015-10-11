@@ -1,0 +1,20 @@
+<html ng-app="myApp1">
+<head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="/public/js/frameworks/angular/angular.js"></script>
+    <script src="/public/js/app/controller.js"></script>
+</head>
+<body>
+Name:<input ng-model="name" type="text"/>
+<br>
+Name:<input ng-model="name" type="text"/>
+<br>
+Name:<input ng-model="name" type="text"/>
+<br>
+Hello {{name}}
+
+<div ng-controller='HelloController1'><p> {{greeting.message}}, World </p></div>
+{{1+2}}
+</body>
+</html>
