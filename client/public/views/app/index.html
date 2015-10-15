@@ -7,30 +7,29 @@
 <!--<![endif]-->
 <head>
     <title>UrbanPoshInteriors</title>
-
     <!-- meta -->
     <meta http-equiv=" X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
 
-<!-- google fonts -->
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans'>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold"/>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,bold,bolditalic"/>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One:regular,italic,bold,bolditalic"/>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic"/>
+    <!-- google fonts -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,bold,bolditalic"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One:regular,italic,bold,bolditalic"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic"/>
 
-<!-- css -->
-<link rel="stylesheet" href="/public/css/framework/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="/public/css/framework/font-awesome/font-awesome.min.css">
-<link rel="stylesheet" href="/public/css/app/style.css" media="screen"/>
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+    <!-- css -->
+    <link rel="stylesheet" href="/public/css/framework/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/framework/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/css/app/style.css" media="screen"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
         <script src="assets/js/html5shiv.js"></script>
         <script src="assets/js/respond.js"></script>
     <![endif]-->
 
-<!--[if IE 8]>
+    <!--[if IE 8]>
         <script src="assets/js/selectivizr.js"></script>
     <![endif]-->
 
@@ -319,21 +318,21 @@
             </header>
             <section class="block-body">
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <form class="" role="form">
+                    <div class="col-md-6 col-md-offset-3" ng-controller="MailController">
+                        <form class="" role="form" ng-submit="sendEmail()">
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-white" id="subject"
+                                <input ng-model="name" type="email" class="form-control form-control-white" id="subject"
                                        placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-white" id="exampleInputEmail2"
-                                       placeholder="Enter email" required>
+                                <input ng-model="email" type="email" class="form-control form-control-white"
+                                       id="exampleInputEmail2" placeholder="Enter email" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control form-control-white" placeholder="Write Something"
-                                          required></textarea>
+                                <textarea ng-model="comments" class="form-control form-control-white"
+                                          placeholder="Write Something" required></textarea>
                             </div>
-                            <input type="submit" class="btn btn-o-white" value="Say Hello">
+                            <input type="submit" class="btn btn-o-white" value="{{message}}">
                         </form>
                     </div>
                 </div>
@@ -355,7 +354,7 @@
 </div>
 <!--/#wrapper-->
 
-<div>
+<!--<div>
     Name:<input ng-model="name" type="text"/>
     <br>
     Name:<input ng-model="name" type="text"/>
@@ -366,7 +365,7 @@
 
     <div><p> {{greeting.message}}, World </p></div>
     {{1+2}}
-</div>
+</div>-->
 
 
 <script src="/public/js/framework/jquery/jquery-2.1.3.min.js"></script>
