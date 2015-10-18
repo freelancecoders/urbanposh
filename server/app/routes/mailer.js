@@ -7,8 +7,8 @@
 // setup e-mail data with unicode symbols
 exports.mailer = function (req, res) {
     var mailOptions = {
-        from: 'urbanposhinteriorspl@gmail.com', // sender address
-        to: req.body.email, // list of receivers
+        from: req.body.email, // sender address
+        to: 'urbanposhinteriorspl@gmail.com', // list of receivers
         subject: 'Hello '+req.body.name, // Subject line
         html: "<b>"+req.body.comments+"</b>" // html body
     };
