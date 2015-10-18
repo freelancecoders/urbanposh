@@ -81,8 +81,8 @@ function setupMailer() {
     transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'sndk.roorkee@gmail.com',
-            pass: 'vineet1206'
+            user: 'urbanposhinteriorspl@gmail.com',
+            pass: 'ykzhkdlzhbncgyaf'
         }
     });
 
@@ -91,8 +91,8 @@ function setupMailer() {
 
 // setup e-mail data with unicode symbols
     var mailOptions = {
-        from: 'sndk.roorkee@gmail.com', // sender address
-        to: 'vineetbadoni@gmail.com', // list of receivers
+        from: 'urbanposhinteriorspl@gmail.com', // sender address
+        to: 'urbanposhinteriorspl@gmail.com', // list of receivers
         subject: 'Node Server Started', // Subject line
         text: 'This is test mail which is sent when the server starts up', // plaintext body
         html: '<b>This is test mail which is sent when the server starts up</b>' // html body
