@@ -9,8 +9,8 @@ exports.mailer = function (req, res) {
     var mailOptions = {
         from: req.body.email, // sender address
         to: 'urbanposhinteriorspl@gmail.com', // list of receivers
-        subject: 'Hello '+req.body.name, // Subject line
-        html: "<b>"+req.body.comments+"</b>" // html body
+        subject: 'Contact me @'+req.body.email , // Subject line
+        html: req.body.comments+"<p>"+req.body.name+"</p>" // html body
     };
     if (transporter) {
         transporter.sendMail(mailOptions, function (error, info) {
